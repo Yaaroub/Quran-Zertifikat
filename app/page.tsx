@@ -17,71 +17,206 @@ type StudentEntry = {
 const STORAGE_KEY = "ramadan-certificate-students-v3";
 
 const DEFAULT_BOYS_STUDENTS: StudentEntry[] = [
-  { id: "b1", name: "يوسف الجبري", surah: "سورة محمد", gender: "male" },
-  { id: "b2", name: "سراج وراسنة", surah: "سورة محمد", gender: "male" },
-  { id: "b3", name: "إسحاق فاهم", surah: "سورة محمد", gender: "male" },
-  { id: "b4", name: "عبد الله القرشي", surah: "سورة محمد", gender: "male" },
-  { id: "b5", name: "محمد هاني", surah: "سورة نوح", gender: "male" },
-  { id: "b6", name: "أمين بونوادر", surah: "سورة نوح", gender: "male" },
-  { id: "b7", name: "أيوب وراسنة", surah: "سورة نوح", gender: "male" },
-  { id: "b8", name: "محمد نور المجيد", surah: "سورة نوح", gender: "male" },
-  { id: "b9", name: "ياسين وراسنة", surah: "سورة الغاشية", gender: "male" },
-  { id: "b10", name: "محمد عبد الله", surah: "سورة الغاشية", gender: "male" },
-  { id: "b11", name: "عبد الرحمن القرشي", surah: "سورة الغاشية", gender: "male" },
-  { id: "b12", name: "وليد اليخلوفي", surah: "سورة الغاشية", gender: "male" },
-  { id: "b13", name: "يوسف ياسر الجبري", surah: "سورة المطففين", gender: "male" },
-  { id: "b14", name: "آدم راشد", surah: "سورة المطففين", gender: "male" },
-  { id: "b15", name: "إلياس الشاهدي", surah: "سورة المطففين", gender: "male" },
-  { id: "b16", name: "تيم الله الأحمد", surah: "سورة المطففين", gender: "male" },
-  { id: "b17", name: "إلياس أسامة الجبري", surah: "سورة الهمزة", gender: "male" },
-  { id: "b18", name: "محمد شكري الجبري", surah: "سورة الهمزة", gender: "male" },
-  { id: "b19", name: "ياسر بونوادر", surah: "سورة الهمزة", gender: "male" },
-  { id: "b20", name: "علاء المجيد", surah: "سورة الهمزة", gender: "male" },
-  { id: "b21", name: "يوسف شواطي", surah: "سورة الهمزة", gender: "male" },
-  { id: "b22", name: "منير كوري", surah: "سورة الهمزة", gender: "male" },
-  { id: "b23", name: "يمان الأحمد", surah: "سورة الهمزة", gender: "male" },
-  { id: "b24", name: "عبد الرحمن الأحمد", surah: "سورة الهمزة", gender: "male" },
-  { id: "b25", name: "آدم هاني", surah: "سورة الهمزة", gender: "male" },
+  // سورة محمد
+  { id: "b1", name: "يوسف أسامة الجبري", surah: "سورة محمد", gender: "male" },
+  { id: "b2", name: "محمد أمين بونوادر", surah: "سورة محمد", gender: "male" },
+
+  // سورة نوح
+  { id: "b3", name: "إلياس الشاهدي", surah: "سورة نوح", gender: "male" },
+  { id: "b4", name: "عبد الرحمن القرشي", surah: "سورة نوح", gender: "male" },
+  { id: "b5", name: "ياسر بونوادر", surah: "سورة نوح", gender: "male" },
+  { id: "b6", name: "أيوب وراسنة", surah: "سورة نوح", gender: "male" },
+  { id: "b7", name: "سراج وراسنة", surah: "سورة نوح", gender: "male" },
+  { id: "b8", name: "يمان الأحمد", surah: "سورة نوح", gender: "male" },
+  { id: "b9", name: "آدم هاني", surah: "سورة نوح", gender: "male" },
+  { id: "b10", name: "عبد الرحمن الأحمد", surah: "سورة نوح", gender: "male" },
+  { id: "b11", name: "منير كوري", surah: "سورة نوح", gender: "male" },
+
+  // سورة الغاشية [cite: 1]
+  { id: "b12", name: "تيم الله الأحمد", surah: "سورة الغاشية", gender: "male" },
+  { id: "b13", name: "إسحاق فاهم", surah: "سورة الغاشية", gender: "male" },
+  { id: "b14", name: "وليد اليخلوفي", surah: "سورة الغاشية", gender: "male" },
+  { id: "b15", name: "محمد نور المجيد", surah: "سورة الغاشية", gender: "male" },
+  { id: "b16", name: "علاء المجيد", surah: "سورة الغاشية", gender: "male" },
+
+  // سورة المطففين [cite: 1]
+  { id: "b17", name: "ياسين وراسنة", surah: "سورة المطففين", gender: "male" },
+  {
+    id: "b18",
+    name: "عبد الله القرشي",
+    surah: "سورة المطففين",
+    gender: "male",
+  },
+  {
+    id: "b19",
+    name: "إلياس أسامة الجبري",
+    surah: "سورة المطففين",
+    gender: "male",
+  },
+  {
+    id: "b20",
+    name: "يوسف ياسر الجبري",
+    surah: "سورة المطففين",
+    gender: "male",
+  },
+
+  // سورة الهمزة [cite: 1]
+  { id: "b21", name: "محمد شكري الجبري", surah: "سورة الهمزة", gender: "male" },
+  { id: "b22", name: "آدم راشد", surah: "سورة الهمزة", gender: "male" },
+  { id: "b23", name: "محمد هاني", surah: "سورة الهمزة", gender: "male" },
+  { id: "b24", name: "محمد عبد الله", surah: "سورة الهمزة", gender: "male" },
+  { id: "b25", name: "يوسف شواطي", surah: "سورة الهمزة", gender: "male" },
 ];
 
 const DEFAULT_GIRLS_STUDENTS: StudentEntry[] = [
+  // سورة محمد
   { id: "g1", name: "ريماس الأحمد", surah: "سورة محمد", gender: "female" },
-  { id: "g2", name: "سلمى سمران", surah: "سورة محمد", gender: "female" },
-  { id: "g3", name: "ياسمين اليخلوفي", surah: "سورة محمد", gender: "female" },
-  { id: "g4", name: "آسية بونوادر", surah: "سورة محمد", gender: "female" },
-  { id: "g5", name: "بيلسان الأحمد", surah: "سورة الفيل", gender: "female" },
+  { id: "g2", name: "بيلسان الأحمد", surah: "سورة محمد", gender: "female" },
+
+  // سورة الفيل
+  { id: "g3", name: "سدرة عقلان", surah: "سورة الفيل", gender: "female" },
+  { id: "g4", name: "سلمى سمران", surah: "سورة الفيل", gender: "female" },
+  { id: "g5", name: "ياسمين اليخلوفي", surah: "سورة الفيل", gender: "female" },
   { id: "g6", name: "ندى راشد", surah: "سورة الفيل", gender: "female" },
-  { id: "g7", name: "نورة الشاهدي", surah: "سورة الفيل", gender: "female" },
-  { id: "g8", name: "أمينة شواطي", surah: "سورة الإنشقاق", gender: "female" },
-  { id: "g9", name: "سمية القرشي", surah: "سورة الإنشقاق", gender: "female" },
-  { id: "g10", name: "علياء فليسات", surah: "سورة المدثر", gender: "female" },
-  { id: "g11", name: "سارة الجبري", surah: "سورة المدثر", gender: "female" },
-  { id: "g12", name: "يقين الأحمد", surah: "سورة المدثر", gender: "female" },
-  { id: "g13", name: "نوران عبد العزيز", surah: "سورة المدثر", gender: "female" },
-  { id: "g14", name: "حليمة شواطي", surah: "سورة المدثر", gender: "female" },
-  { id: "g15", name: "ليان عبد العزيز", surah: "سورة المدثر", gender: "female" },
+  { id: "g7", name: "علياء فليسات", surah: "سورة الفيل", gender: "female" },
+  { id: "g8", name: "ليان عبد العزيز", surah: "سورة الفيل", gender: "female" },
+
+  // سورة الإنشقاق
+  { id: "g9", name: "يقين الأحمد", surah: "سورة الإنشقاق", gender: "female" },
+  { id: "g10", name: "أمينة شواطي", surah: "سورة الإنشقاق", gender: "female" },
+  { id: "g11", name: "سمية القرشي", surah: "سورة الإنشقاق", gender: "female" },
+  { id: "g12", name: "آسية بونوادر", surah: "سورة الإنشقاق", gender: "female" },
+  { id: "g13", name: "حليمة شواطي", surah: "سورة الإنشقاق", gender: "female" },
+  { id: "g14", name: "سارة الجبري", surah: "سورة الإنشقاق", gender: "female" },
+
+  // سورة المدثر
+  { id: "g15", name: "نورة الشاهدي", surah: "سورة المدثر", gender: "female" },
+  {
+    id: "g16",
+    name: "نوران عبد العزيز",
+    surah: "سورة المدثر",
+    gender: "female",
+  },
+
+  // سورة النور
+  { id: "g17", name: "بلقيس الذبحاني", surah: "سورة النور", gender: "female" },
 ];
 
 const DEFAULT_SURAHS = [
-  "سورة الفاتحة", "سورة البقرة", "سورة آل عمران", "سورة النساء", "سورة المائدة", "سورة الأنعام",
-  "سورة الأعراف", "سورة الأنفال", "سورة التوبة", "سورة يونس", "سورة هود", "سورة يوسف",
-  "سورة الرعد", "سورة إبراهيم", "سورة الحجر", "سورة النحل", "سورة الإسراء", "سورة الكهف",
-  "سورة مريم", "سورة طه", "سورة الأنبياء", "سورة الحج", "سورة المؤمنون", "سورة النور",
-  "سورة الفرقان", "سورة الشعراء", "سورة النمل", "سورة القصص", "سورة العنكبوت", "سورة الروم",
-  "سورة لقمان", "سورة السجدة", "سورة الأحزاب", "سورة سبإ", "سورة فاطر", "سورة يس",
-  "سورة الصافات", "سورة ص", "سورة الزمر", "سورة غافر", "سورة فصلت", "سورة الشورى",
-  "سورة الزخرف", "سورة الدخان", "سورة الجاثية", "سورة الأحقاف", "سورة محمد", "سورة الفتح",
-  "سورة الحجرات", "سورة ق", "سورة الذاريات", "سورة الطور", "سورة النجم", "سورة القمر",
-  "سورة الرحمن", "سورة الواقعة", "سورة الحديد", "سورة المجادلة", "سورة الحشر", "سورة الممتحنة",
-  "سورة الصف", "سورة الجمعة", "سورة المنافقون", "سورة التغابن", "سورة الطلاق", "سورة التحريم",
-  "سورة الملك", "سورة القلم", "سورة الحاقة", "سورة المعارج", "سورة نوح", "سورة الجن",
-  "سورة المزمل", "سورة المدثر", "سورة القيامة", "سورة الإنسان", "سورة المرسلات", "سورة النبأ",
-  "سورة النازعات", "سورة عبس", "سورة التكوير", "سورة الانفطار", "سورة المطففين", "سورة الانشقاق",
-  "سورة البروج", "سورة الطارق", "سورة الأعلى", "سورة الغاشية", "سورة الفجر", "سورة البلد",
-  "سورة الشمس", "سورة الليل", "سورة الضحى", "سورة الشرح", "سورة التين", "سورة العلق",
-  "سورة القدر", "سورة البينة", "سورة الزلزلة", "سورة العاديات", "سورة القارعة", "سورة التكاثر",
-  "سورة العصر", "سورة الهمزة", "سورة الفيل", "سورة قريش", "سورة الماعون", "سورة الكوثر",
-  "سورة الكافرون", "سورة النصر", "سورة المسد", "سورة الإخلاص", "سورة الفلق", "سورة الناس",
+  "سورة الفاتحة",
+  "سورة البقرة",
+  "سورة آل عمران",
+  "سورة النساء",
+  "سورة المائدة",
+  "سورة الأنعام",
+  "سورة الأعراف",
+  "سورة الأنفال",
+  "سورة التوبة",
+  "سورة يونس",
+  "سورة هود",
+  "سورة يوسف",
+  "سورة الرعد",
+  "سورة إبراهيم",
+  "سورة الحجر",
+  "سورة النحل",
+  "سورة الإسراء",
+  "سورة الكهف",
+  "سورة مريم",
+  "سورة طه",
+  "سورة الأنبياء",
+  "سورة الحج",
+  "سورة المؤمنون",
+  "سورة النور",
+  "سورة الفرقان",
+  "سورة الشعراء",
+  "سورة النمل",
+  "سورة القصص",
+  "سورة العنكبوت",
+  "سورة الروم",
+  "سورة لقمان",
+  "سورة السجدة",
+  "سورة الأحزاب",
+  "سورة سبإ",
+  "سورة فاطر",
+  "سورة يس",
+  "سورة الصافات",
+  "سورة ص",
+  "سورة الزمر",
+  "سورة غافر",
+  "سورة فصلت",
+  "سورة الشورى",
+  "سورة الزخرف",
+  "سورة الدخان",
+  "سورة الجاثية",
+  "سورة الأحقاف",
+  "سورة محمد",
+  "سورة الفتح",
+  "سورة الحجرات",
+  "سورة ق",
+  "سورة الذاريات",
+  "سورة الطور",
+  "سورة النجم",
+  "سورة القمر",
+  "سورة الرحمن",
+  "سورة الواقعة",
+  "سورة الحديد",
+  "سورة المجادلة",
+  "سورة الحشر",
+  "سورة الممتحنة",
+  "سورة الصف",
+  "سورة الجمعة",
+  "سورة المنافقون",
+  "سورة التغابن",
+  "سورة الطلاق",
+  "سورة التحريم",
+  "سورة الملك",
+  "سورة القلم",
+  "سورة الحاقة",
+  "سورة المعارج",
+  "سورة نوح",
+  "سورة الجن",
+  "سورة المزمل",
+  "سورة المدثر",
+  "سورة القيامة",
+  "سورة الإنسان",
+  "سورة المرسلات",
+  "سورة النبأ",
+  "سورة النازعات",
+  "سورة عبس",
+  "سورة التكوير",
+  "سورة الانفطار",
+  "سورة المطففين",
+  "سورة الانشقاق",
+  "سورة البروج",
+  "سورة الطارق",
+  "سورة الأعلى",
+  "سورة الغاشية",
+  "سورة الفجر",
+  "سورة البلد",
+  "سورة الشمس",
+  "سورة الليل",
+  "سورة الضحى",
+  "سورة الشرح",
+  "سورة التين",
+  "سورة العلق",
+  "سورة القدر",
+  "سورة البينة",
+  "سورة الزلزلة",
+  "سورة العاديات",
+  "سورة القارعة",
+  "سورة التكاثر",
+  "سورة العصر",
+  "سورة الهمزة",
+  "سورة الفيل",
+  "سورة قريش",
+  "سورة الماعون",
+  "سورة الكوثر",
+  "سورة الكافرون",
+  "سورة النصر",
+  "سورة المسد",
+  "سورة الإخلاص",
+  "سورة الفلق",
+  "سورة الناس",
 ];
 
 const generateId = () =>
@@ -92,21 +227,34 @@ export default function Page() {
   const [mode, setMode] = useState<CertificateMode>("winner");
   const [rank, setRank] = useState<WinnerRank>("الأول");
 
-  const [boysStudents, setBoysStudents] = useState<StudentEntry[]>(DEFAULT_BOYS_STUDENTS);
-  const [girlsStudents, setGirlsStudents] = useState<StudentEntry[]>(DEFAULT_GIRLS_STUDENTS);
+  const [boysStudents, setBoysStudents] = useState<StudentEntry[]>(
+    DEFAULT_BOYS_STUDENTS,
+  );
+  const [girlsStudents, setGirlsStudents] = useState<StudentEntry[]>(
+    DEFAULT_GIRLS_STUDENTS,
+  );
 
-  const [studentId, setStudentId] = useState<string>(DEFAULT_BOYS_STUDENTS[0]?.id ?? "");
+  const [studentId, setStudentId] = useState<string>(
+    DEFAULT_BOYS_STUDENTS[0]?.id ?? "",
+  );
   const [searchTerm, setSearchTerm] = useState("");
 
-  const [templatePath, setTemplatePath] = useState("/images/quran-certificate-template.png");
+  const [templatePath, setTemplatePath] = useState(
+    "/images/quran-certificate-template.png",
+  );
   const [dateText, setDateText] = useState("رمضان 1447هـ / 2026م");
   const [signatureText, setSignatureText] = useState("إدارة الجمعية");
 
   const [introMale, setIntroMale] = useState("يسعدنا تقديم هذه الشهادة للطالب");
-  const [introFemale, setIntroFemale] = useState("يسعدنا تقديم هذه الشهادة للطالبة");
-  const [thanksMale, setThanksMale] = useState("كما نتقدم بالشكر لولي أمره ولمن قام بتحفيظه.");
-  const [thanksFemale, setThanksFemale] = useState("كما نتقدم بالشكر لولي أمرها ولمن قام بتحفيظها.");
-  
+  const [introFemale, setIntroFemale] = useState(
+    "يسعدنا تقديم هذه الشهادة للطالبة",
+  );
+  const [thanksMale, setThanksMale] = useState(
+    "كما نتقدم بالشكر لولي أمره ولمن قام بتحفيظه.",
+  );
+  const [thanksFemale, setThanksFemale] = useState(
+    "كما نتقدم بالشكر لولي أمرها ولمن قام بتحفيظها.",
+  );
 
   const [draftName, setDraftName] = useState("");
   const [draftSurah, setDraftSurah] = useState("سورة محمد");
@@ -160,13 +308,10 @@ export default function Page() {
   const filteredStudents = useMemo(() => {
     const q = searchTerm.trim();
     if (!q) return students;
-    return students.filter(
-      (s) => s.name.includes(q) || s.surah.includes(q)
-    );
+    return students.filter((s) => s.name.includes(q) || s.surah.includes(q));
   }, [students, searchTerm]);
 
-  const selectedEntry =
-    students.find((s) => s.id === studentId) ?? null;
+  const selectedEntry = students.find((s) => s.id === studentId) ?? null;
 
   const selectedGender = selectedEntry?.gender ?? fallbackGender;
   const selectedSurah = selectedEntry?.surah ?? "سورة محمد";
@@ -175,18 +320,31 @@ export default function Page() {
   const introText = selectedGender === "female" ? introFemale : introMale;
   const closingThanks = selectedGender === "female" ? thanksFemale : thanksMale;
 
-  const achievementText = useMemo(() => {
-    if (mode === "winner") {
-      return selectedGender === "female"
-        ? `لحصولها على المركز ${rank} في مسابقة رمضان لحفظ ${selectedSurah}٫`
-        : `لحصوله على المركز ${rank} في مسابقة رمضان لحفظ ${selectedSurah}٫`;
-    }
+const achievementText = useMemo(() => {
+  if (mode === "winner") {
+    return selectedGender === "female" ? (
+      <>
+        لحصولها على المركز <strong>{rank}</strong> في مسابقة رمضان لحفظ{" "}
+        <strong>{selectedSurah}</strong>
+      </>
+    ) : (
+      <>
+        لحصوله على المركز <strong>{rank}</strong> في مسابقة رمضان لحفظ{" "}
+        <strong>{selectedSurah}</strong>
+      </>
+    );
+  }
 
-    return selectedGender === "female"
-      ? `لمشاركتها الطيبة في مسابقة رمضان لحفظ ${selectedSurah}٫`
-      : `لمشاركته الطيبة في مسابقة رمضان لحفظ ${selectedSurah}٫`;
-  }, [mode, rank, selectedGender, selectedSurah]);
-
+  return selectedGender === "female" ? (
+    <>
+      لمشاركتها الطيبة في مسابقة رمضان لحفظ <strong>{selectedSurah}</strong>
+    </>
+  ) : (
+    <>
+      لمشاركته الطيبة في مسابقة رمضان لحفظ <strong>{selectedSurah}</strong>
+    </>
+  );
+}, [mode, rank, selectedGender, selectedSurah]);
   const selectStudent = (id: string) => {
     setStudentId(id);
     const found = students.find((s) => s.id === id);
@@ -241,7 +399,7 @@ export default function Page() {
     const updated = students.map((s) =>
       s.id === selectedEntry.id
         ? { ...s, name: cleanName, surah: draftSurah, gender: fallbackGender }
-        : s
+        : s,
     );
 
     setStudents(updated);
@@ -256,7 +414,7 @@ export default function Page() {
         JSON.stringify({
           boys: boysStudents,
           girls: girlsStudents,
-        })
+        }),
       );
       setSaveMessage("تم حفظ جميع البيانات");
     } catch {
@@ -420,24 +578,25 @@ export default function Page() {
                 <img
                   src={templatePath}
                   alt="certificate template"
-                  className="absolute inset-0 h-full w-full object-cover"
+                  className="absolute inset-0 h-full w-full "
                 />
 
                 <div className="absolute inset-0 text-center text-[#2a2522]">
-                  <div className="absolute left-[14%] right-[14%] top-[46%] text-[clamp(13px,1.85vw,27px)] font-medium leading-[1.8] text-[#2f2824]">
+                  <div className="absolute left-[14%] right-[14%] top-[46.5%] text-[clamp(13px,1.85vw,27px)] font-medium leading-[1.8] text-[#2f2824]">
                     {introText}
                   </div>
 
-                  <div className="absolute left-1/2 top-[50.6%] w-[56%] -translate-x-1/2 px-3 text-[clamp(20px,3vw,44px)] font-extrabold leading-none tracking-tight text-[#1d1815]">
+                  <div className="absolute left-1/2 top-[52%] w-[56%] -translate-x-1/2 px-3 text-[clamp(20px,3vw,44px)] font-extrabold leading-none tracking-tight text-[#1d1815]">
                     {selectedName || "........................"}
                   </div>
 
-                  <div className="absolute left-[13.5%] right-[13.5%] top-[58%] text-[clamp(13px,1.65vw,25px)] leading-[2] text-[#2f2824]">
+                  <div className="absolute left-[13.5%] right-[13.5%] top-[58%] text-[clamp(15px,2vw,35px)] leading-[2] text-[#2f2824]">
+                    {" "}
                     <div>{achievementText}</div>
                     <div>{closingThanks}</div>
                   </div>
-
-                  <div className="absolute right-[10.4%] bottom-[20%] w-[28%] text-center text-[clamp(9px,1vw,15px)] font-medium leading-[1.8] text-[#655b52]">
+                  <div className="absolute left-[12%] top-[35%] w-[20%] -rotate-[45deg] text-center text-[clamp(11px,1.2vw,18px)] font-semibold tracking-wide text-[#5e5146] drop-shadow-[0_1px_0_rgba(255,255,255,0.6)]">
+                    {" "}
                     {dateText}
                   </div>
 
